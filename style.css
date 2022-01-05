@@ -1,0 +1,57 @@
+/* Import font */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* 
+Structure : 
+
+    element {
+        property1: value1;
+        property2: value2;
+    }
+
+*/
+
+body {
+    /* background-image: linear-gradient(white, lime); */
+    background: azure;
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    color : blue;
+}
+
+h1 {
+    background: black;
+    color: limegreen;
+
+    /* padding: 10px 10px; */
+}
+
+h2 {
+    color: magenta;
+}
+
+button {
+    border: none;
+    color: whitesmoke;
+    font-weight: bold;
+    text-align: center;
+
+    /* Eart entre le texte et les bords du boutton */
+    padding: 15px 15px; 
+}
+
+.btn1 {
+    background: blueviolet;
+
+    /* Création de bords arrondis */
+    border-radius: 10px;
+}
+
+.btn2 {
+    background: red;
+
+    border-radius: 30px;
+}
