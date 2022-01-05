@@ -12,44 +12,58 @@ Structure :
 
 */
 
+/* Mettre les div en couleur permet de comprendre l'espace qu'elles occupent */
+
 body {
 	/* background-image: linear-gradient(white, lime); */
 	background: azure;
 	font-family: "Montserrat", sans-serif;
+
+    margin:0;
+    padding: 0;
 }
 
-button {
-    border: none;
-    color: whitesmoke;
-    font-weight: bold;
-    text-align: center;
+header {
+	background-color: red;
 
-    /* Ecart entre le texte et les bords du boutton */
-    padding: 15px 15px;
+    margin: 10px;
+    padding: 20px 10px;
+
+    /* text-align: center; */
 }
 
-p {
-	color: blue;
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
-h1 {
-	background: black;
-	color: limegreen;
+li {
+    display: inline-block;
+    margin-right: 20px;
 }
 
-h2 {
-	color: magenta;
+section {
+	background-color: cyan;
+
+    margin: 10px;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: row;
 }
 
-.btn1 {
-	background: blueviolet;
-
-	/* Création de bords arrondis */
-	border-radius: 10px;
+div {
+    background-color: yellow;
+    margin: auto;
+    width: 100px;
 }
 
-.btn2 {
-	background: red;
-
-	border-radius: 30px;
+footer {
+    background-color: lime;
+    
+    margin: 10px;
+    padding: 10px 15px;
 }
+
+
