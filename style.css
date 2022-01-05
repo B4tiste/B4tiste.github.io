@@ -24,18 +24,56 @@ body {
 }
 
 header {
-	background-color: red;
-
+    background-color: turquoise;
+	background-image: url("Pictures/Map.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-self: center;
+    height: 400px;
     margin: 10px;
     padding: 20px 10px;
+}
 
-    /* text-align: center; */
+header a {
+    background-color: orange;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    top: 40px;
+
+    margin: 10px;
+    padding: 10px;
+
+    border-radius: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+header .logo a {
+    background-image: url("Pictures/France.png");
+    background-size: 150px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    position: relative;
+    width: 150px;
+    height: 80px;
+    top: 0px;
+    text-indent: -99999999px;
+
+    margin: 0px;
+    padding: 0px;
 }
 
 ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
+    text-align: center;
 }
 
 li {
@@ -43,27 +81,50 @@ li {
     margin-right: 20px;
 }
 
-section {
-	background-color: cyan;
-
-    margin: 10px;
-    padding: 15px;
-
+.features {
+	background-color: white;
+    color: grey;
     display: flex;
     flex-direction: row;
+
+    
+    margin: 10px;
+    padding: 15px;
+    
+    text-align: center;
+    text-transform: uppercase;
 }
 
-div {
-    background-color: yellow;
+.features figure {
+    /* background-color: yellow; */
     margin: auto;
-    width: 100px;
+    width: 40%;
+}
+
+.features figure img, video {
+    width: 100%;
+    border: 2px solid black;
+}
+
+.features figure img {
+    border-radius: 50%;
+    box-shadow: black 0 0 20px;
+}
+
+.docs {
+    color: grey;
+    margin: 10px;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.docs figure img {
+    width: 90%;
 }
 
 footer {
-    background-color: lime;
-    
-    margin: 10px;
-    padding: 10px 15px;
+    background-color: grey;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: underline;
 }
-
-
