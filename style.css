@@ -31,32 +31,33 @@ header {
 }
 
 header a {
-    background-color: lightyellow;
-    text-decoration: none;
-    color: grey;
-    text-transform: uppercase;
-    position: relative;
-    /* top: 40px; */
-
+    background-color: grey;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
     margin: 10px;
     padding: 10px;
-
-    border-radius: 10px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
-a:hover {
-    text-decoration: underline;
+header a:hover {
     color: black;
+    box-shadow: black 0px 0px 5px;
+    text-decoration: underline;
 }
 
 header .logo a {
     background-image: url("Pictures/gif_maze.gif");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    border: 5px solid black;
+    /* border-radius: 0; */
     display: inline-block;
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     /* top: 0px; */
     text-indent: -99999999px;
 
