@@ -1,6 +1,6 @@
 /* Import font */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 /* 
 Structure : 
@@ -13,24 +13,9 @@ Structure :
 */
 
 body {
-    /* background-image: linear-gradient(white, lime); */
-    background: azure;
-    font-family: 'Montserrat', sans-serif;
-}
-
-p {
-    color : blue;
-}
-
-h1 {
-    background: black;
-    color: limegreen;
-
-    /* padding: 10px 10px; */
-}
-
-h2 {
-    color: magenta;
+	/* background-image: linear-gradient(white, lime); */
+	background: azure;
+	font-family: "Montserrat", sans-serif;
 }
 
 button {
@@ -39,19 +24,32 @@ button {
     font-weight: bold;
     text-align: center;
 
-    /* Eart entre le texte et les bords du boutton */
-    padding: 15px 15px; 
+    /* Ecart entre le texte et les bords du boutton */
+    padding: 15px 15px;
+}
+
+p {
+	color: blue;
+}
+
+h1 {
+	background: black;
+	color: limegreen;
+}
+
+h2 {
+	color: magenta;
 }
 
 .btn1 {
-    background: blueviolet;
+	background: blueviolet;
 
-    /* Création de bords arrondis */
-    border-radius: 10px;
+	/* Création de bords arrondis */
+	border-radius: 10px;
 }
 
 .btn2 {
-    background: red;
+	background: red;
 
-    border-radius: 30px;
+	border-radius: 30px;
 }
