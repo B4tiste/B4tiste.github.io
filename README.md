@@ -16,3 +16,5 @@ Fichiers source du site personnel : [Site Perso](http://batiste-laloi.com/Portfo
 ### - Rendre le site responsiveazeaze
 
 ### - Se familiariser avec le JavaScript
+
+azeaze
