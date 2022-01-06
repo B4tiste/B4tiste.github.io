@@ -13,9 +13,8 @@ Fichiers source du site personnel : [Site Perso](http://batiste-laloi.com/Portfo
 3. Qui suis-je ?
 4. Contact
 
-### - Rendre le site responsiveazeaze
+### - Rendre le site responsive
 
 ### - Se familiariser avec le JavaScript
 
-aze3aze
 
