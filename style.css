@@ -142,6 +142,10 @@ section.cv a:hover {
     text-decoration: underline;
 }
 
+embed {
+    width: 100%;
+}
+
 section.coming-soon {
     background-color: lightseagreen;
     font-size: 30px;

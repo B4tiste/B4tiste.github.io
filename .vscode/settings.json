@@ -3,5 +3,8 @@
     "cSpell.words": [
         "ENSTO",
         "Novexia"
+    ],
+    "cSpell.enableFiletypes": [
+        "html"
     ]
 }
