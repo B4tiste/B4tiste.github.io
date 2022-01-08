@@ -1,3 +1,21 @@
 /* 
     Feuille de style perso
 */
+
+.btn-primary {
+    background-color: lightgreen;
+    border-color: lightgreen;
+    color: black;
+}
+
+.btn-primary:hover {
+    background-color: green;
+    border-color: green;
+    color: white;
+}
+
+.btn-primary:focus {
+    background-color: green;
+    border-color: green;
+    color: white;
+}
