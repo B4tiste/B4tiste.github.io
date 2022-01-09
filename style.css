@@ -19,3 +19,11 @@
     border-color: green;
     color: white;
 }
+
+a.icone-contact {
+    color: darkslategray;
+}
+
+a.icone-contact:hover {
+    opacity: 0.7;
+}
