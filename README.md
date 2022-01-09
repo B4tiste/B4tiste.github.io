@@ -1,6 +1,6 @@
 # Site perso
 
-Fichiers source du site personnel : [Site Perso](http://batiste-laloi.com/Portfolio/index.html)
+Fichiers source du site personnel : [Site Perso](http://batiste-laloi.com/)
 
 ## TO-DO : 
 
