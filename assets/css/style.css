@@ -628,6 +628,7 @@ section {
     overflow: hidden;
     z-index: 1;
     background: rgba(69, 80, 91, 0.8);
+    border: 1px solid gray;
 }
 
 .portfolio .portfolio-wrap::before {
@@ -756,6 +757,10 @@ section {
     position: relative;
 }
 
+.portfolio-details .portfolio-details-slider .swiper-slide {
+    border: 1px solid gray;
+}
+
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
@@ -804,6 +809,8 @@ section {
 .portfolio-details .portfolio-description p {
     padding: 0;
 }
+
+
 
 /*--------------------------------------------------------------
 # Contact
