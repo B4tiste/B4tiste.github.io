@@ -297,7 +297,7 @@ h6 {
 
 #accueil:before {
     content: "";
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.5);
     position: absolute;
     bottom: 0;
     top: 0;
@@ -894,4 +894,15 @@ section {
 
 #footer .credits {
     font-size: 13px;
+}
+
+/*--------------------------------------------------------------
+# Canvas
+--------------------------------------------------------------*/
+#canvas {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	z-index: -1;
 }
