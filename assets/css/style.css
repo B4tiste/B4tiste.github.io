@@ -35,12 +35,12 @@ h6 {
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
-.back-to-top {
+.back-to-top, .langue {
     position: fixed;
     visibility: hidden;
     opacity: 0;
     right: 15px;
-    bottom: 15px;
+    bottom: 70px;
     z-index: 996;
     background: #FF0080;
     width: 40px;
@@ -63,6 +63,24 @@ h6 {
 .back-to-top.active {
     visibility: visible;
     opacity: 1;
+}
+
+/* Langue */
+.langue {
+    visibility: visible;
+    opacity: 1;
+    right: 15px;
+    bottom: 15px;
+    background: #728394;
+}
+
+.back-to-top:hover, .langue:hover {
+    background: black;
+}
+
+.langue div {
+    color: white;
+    font-weight: bold;
 }
 
 /*--------------------------------------------------------------

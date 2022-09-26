@@ -91,6 +91,22 @@
     }
 
     /**
+     * Back to top button
+     */
+     let langue = select(".langue");
+     if (langue) {
+         const toggleBacktotop = () => {
+             if (window.scrollY > 100) {
+                langue.classList.add("active");
+             } else {
+                langue.classList.remove("active");
+             }
+         };
+         window.addEventListener("load", toggleBacktotop);
+         onscroll(document, toggleBacktotop);
+     }
+
+    /**
      * Mobile nav toggle
      */
     on("click", ".mobile-nav-toggle", function (e) {
