@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ProbaSW</title>
+    </head>
+    <body>
+        <!-- Application de calculs de probabilités -->
+        <h1>Probabilités</h1>
+
+        <!--
+        Formulaire lié à une fonction de calcul JS, prenant les parametres d'entrée suivants : 
+        - p : Proba de succès
+        - n : Nombre de coups
+        - x : Nombre d'adversaires
+        - M : booléen
+        - N : booléen
+        - P : precision (entre 15 et 100)
+    -->
+        <form action="javascript:calculProbabilite()">
+            <label for="n">Nombre de coups : </label>
+            <input
+                type="number"
+                id="n"
+                name="n"
+                min="1"
+                max="100"
+                step="1"
+                value="1"
+            /><br /><br />
+            <label for="x">Nombre d'adversaires : </label>
+            <input
+                type="number"
+                id="x"
+                name="x"
+                min="1"
+                max="100"
+                step="1"
+                value="1"
+            /><br /><br />
+            <label for="M">Molly : </label>
+            <input type="checkbox" id="M" name="M" value="true" /><br /><br />
+            <input type="submit" value="Calculer" />
+        </form>
+
+        <!-- Affichage du résultat -->
+        <p id="resultat"></p>
+
+        <!-- Script JS -->
+        <script defer>
+            function calculProbabilite() {
+                // Récupération des paramètres
+                var hits = document.getElementById("n").value;
+                var adversaires = document.getElementById("x").value;
+                var molly = document.getElementById("M").checked;
+
+                // Calcul de la probabilité
+                var res;
+
+                if (molly) {
+                    res = (1 - (0.15 + 0.85 * 0.15) ** hits) ** adversaires;
+                } else {
+                    res = (1 - 0.15 ** hits) ** adversaires;
+                }
+
+                // Affichage du résultat
+                document.getElementById("resultat").innerHTML =
+                    "La probabilité de réussite est de " + res * 100 + "%";
+            }
+        </script>
+    </body>
+</html>
