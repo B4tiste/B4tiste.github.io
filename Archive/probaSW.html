@@ -11,15 +11,24 @@
         <h1>Probabilités</h1>
 
         <!--
-        Formulaire lié à une fonction de calcul JS, prenant les parametres d'entrée suivants : 
-        - p : Proba de succès
+        Formulaire lié à une fonction de calcul JS, prenant les parametres d'entrée suivants :
+        - activ : Proba d'activation de l'attaque
         - n : Nombre de coups
         - x : Nombre d'adversaires
         - M : booléen
         - N : booléen
-        - P : precision (entre 15 et 100)
     -->
         <form action="javascript:calculProbabilite()">
+            <label for="activ">Taux d'activation (%) : </label>
+            <input
+                type="number"
+                id="activ"
+                name="activ"
+                min="0"
+                max="100"
+                step="1"
+                value="0"
+            /><br /><br />
             <label for="n">Nombre de coups : </label>
             <input
                 type="number"
@@ -40,10 +49,15 @@
                 step="1"
                 value="1"
             /><br /><br />
-            <label for="M">Molly : </label>
+            <label for="M">Molly (Gallion n'est pas affecté par Molly) : </label>
             <input type="checkbox" id="M" name="M" value="true" /><br /><br />
+            <label for="N">Nyx : </label>
+            <input type="checkbox" id="N" name="N" value="true" /><br /><br />
             <input type="submit" value="Calculer" />
-        </form>
+        </form> <br />
+
+        <!-- Reset button -->
+        <button onclick="window.location.reload()">Reset</button>
 
         <!-- Affichage du résultat -->
         <p id="resultat"></p>
@@ -52,22 +66,34 @@
         <script defer>
             function calculProbabilite() {
                 // Récupération des paramètres
+                var active = document.getElementById("activ").value;
                 var hits = document.getElementById("n").value;
                 var adversaires = document.getElementById("x").value;
                 var molly = document.getElementById("M").checked;
+                var nyx = document.getElementById("N").checked;
 
                 // Calcul de la probabilité
-                var res;
+                var resultat;
 
                 if (molly) {
-                    res = (1 - (0.15 + 0.85 * 0.15) ** hits) ** adversaires;
-                } else {
-                    res = (1 - 0.15 ** hits) ** adversaires;
+                    resultat = ((active/100)**hits - (0.15 + 0.85 * 0.15)**hits)**adversaires;
+                }
+                else if (nyx) {
+                    resultat = ((active/100)**hits - 0.15**hits)**adversaires;
+                }
+                else if (molly && nyx) {
+                    resulat = ((active/100)**hits * (0.85)**hits * (0.7)**hits * (0.85)**hits)**adversaires;
+                }
+                else {
+                    resultat = ((active/100)**hits - 0.15**hits)**adversaires;
                 }
 
-                // Affichage du résultat
-                document.getElementById("resultat").innerHTML =
-                    "La probabilité de réussite est de " + res * 100 + "%";
+                if (resultat < 0) {
+                    resultat = 0;
+                }
+
+                // Affichage du résultat avec 4 chiffres après la virgule
+                document.getElementById("resultat").innerHTML = "Probabilité : " + 100 * resultat.toFixed(4) + "%";
             }
         </script>
     </body>

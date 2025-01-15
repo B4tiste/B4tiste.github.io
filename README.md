@@ -4,6 +4,6 @@ Fichiers source du site personnel : [batiste-laloi.com](https://batiste-laloi.co
 
 ## ToDo
 
-- [ ] Modifier l'architecture du site pour le changement entre FR et EN en utilisant un fichier de config de langue avec les textes de chaque langue
+- [ ] Passer le site uniquement en anglais
 - [ ] Mettre à jour les informations du site
 - [ ] Ajouter tous les projets manquants
