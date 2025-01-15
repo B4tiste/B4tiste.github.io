@@ -1,0 +1,26 @@
+---
+const { name, description, technos, images } = Astro.props;
+---
+
+<div class="border rounded-lg shadow-lg p-4">
+    <div class="text-xl font-bold mb-2">{name}</div>
+    <div class="mb-2">{description}</div>
+    <ul class="flex gap-2 mb-4">
+        {
+            technos.map((tech: unknown) => (
+                <li class="bg-blue-500 px-2 py-1 rounded">{tech}</li>
+            ))
+        }
+    </ul>
+    <div class="flex overflow-x-auto gap-2">
+        {
+            images.map((image: string | null | undefined) => (
+                <img
+                    src={image}
+                    alt={`Image for ${name}`}
+                    class="h-32 rounded"
+                />
+            ))
+        }
+    </div>
+</div>

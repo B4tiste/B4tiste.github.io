@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Projet 1",
+        "description": "Description du projet 1",
+        "technos": ["HTML", "CSS", "JavaScript"],
+        "images": ["project1-img1.png", "project1-img2.png"]
+    },
+    {
+        "name": "Projet 2",
+        "description": "Description du projet 2",
+        "technos": ["React", "Node.js"],
+        "images": ["project2-img1.png"]
+    }
+]

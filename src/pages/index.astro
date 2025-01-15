@@ -1,0 +1,15 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import projects from "../data/projects.json";
+---
+
+<BaseLayout title="Accueil">
+    <h2 class="text-3xl font-semibold mb-4">Bienvenue sur mon portfolio !</h2>
+    <p>Découvrez mes projets et mon parcours</p>
+
+    <h2 class="text-3xl font-semibold mb-4">Mes projets</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {projects.map((project) => <ProjectCard {...project} />)}
+    </div>
+</BaseLayout>
