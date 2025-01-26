@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    .themed-text {
+        @apply text-light-theme-text-color dark:text-dark-theme-text-color;
+    }
+
+    .themed-background {
+        @apply bg-light-theme-background-color dark:bg-dark-theme-background-color;
+    }
+
+    .box-text {
+        @apply text-dark-theme-text-color;
+    }
+}

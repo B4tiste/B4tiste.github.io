@@ -1,26 +1,56 @@
 ---
 const { name, description, technos, images } = Astro.props;
+const hasMultipleImages = images.length > 1; // Vérifie s'il y a au moins 2 images
 ---
 
-<div class="border rounded-lg shadow-lg p-4">
-    <div class="text-xl font-bold mb-2">{name}</div>
-    <div class="mb-2">{description}</div>
+<div class="border-2 border-secondary-color rounded-lg shadow-lg p-4">
+    <div class="text-xl themed-text font-bold mb-2">
+        {name}
+    </div>
+    <div class="themed-text mb-2">{description}</div>
     <ul class="flex gap-2 mb-4">
         {
-            technos.map((tech: unknown) => (
-                <li class="bg-blue-500 px-2 py-1 rounded">{tech}</li>
+            technos.map((tech: string) => (
+                <li class="font-bold bg-title-box-color box-text px-2 py-1 rounded">
+                    {tech}
+                </li>
             ))
         }
     </ul>
-    <div class="flex overflow-x-auto gap-2">
+
+    <!-- Carousel Wrapper -->
+    <div class="relative w-full flex items-center justify-center">
         {
-            images.map((image: string | null | undefined) => (
-                <img
-                    src={image}
-                    alt={`Image for ${name}`}
-                    class="h-32 rounded"
-                />
-            ))
+            hasMultipleImages && (
+                <button
+                    id="prevBtn"
+                    class="absolute left-0 px-3 py-1 rounded-l"
+                >
+                    ◀
+                </button>
+            )
+        }
+
+        <img
+            id="carouselImage"
+            src={images[0]}
+            alt={`Image for ${name}`}
+            class="h-32 rounded"
+            data-images={JSON.stringify(images)}
+        />
+
+        {
+            hasMultipleImages && (
+                <button
+                    id="nextBtn"
+                    class="absolute right-0 px-3 py-1 rounded-r"
+                >
+                    ▶
+                </button>
+            )
         }
     </div>
 </div>
+
+<!-- Importer le fichier JS côté client -->
+<script src="/carousel.js" defer></script>
